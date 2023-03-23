@@ -5,7 +5,7 @@
 
 ---
 
-# Overview
+## Overview
 
 
 What's ready?
@@ -25,13 +25,13 @@ What's ready?
 
 
 
-# Requirements
+## Requirements
 
 * Python 3.6+
 
 I **highly recommend** using the latest patch release of Python.
 
-# Installation
+## Installation
 
 --> First of all, clone this repository:
 
@@ -63,7 +63,7 @@ pip install -r requirements.txt
 
 ```
 
-# Database configuration
+## Database configuration
 
 --> Edit chatbot/.env file and specify data of your database. For example:
 ```
@@ -96,7 +96,7 @@ python manage.py migrate
 
 #
 
-# Running development server
+## Running development server
 
 --> To run the ChatBot, use :
 ```bash
@@ -108,13 +108,13 @@ python manage.py runserver
 
 
 
-# Deployment
+## Deployment
 
 You can use nginx + gunicorn (Linux) or mod_wsgi + Apache (Windows) to deploy this application. 
 
 
 
-# *To-Do:*
+## *To-Do:*
 
 * Create DockerFile for fast deployment
 * Add public registartion and replace login template
