@@ -65,20 +65,17 @@ pip install -r requirements.txt
 
 # Database configuration
 
---> Change name of .env.sample file to .env and specify data of your database. For example:
+--> Edit chatbot/.env file and specify data of your database. For example:
 ```
-SECRET_KEY = 'YOUR-SECRET-KEY'
-OPENAI_API_KEY = 'YOUR-API-KEY'
+SECRET_KEY = 'some-secret-key' 
+OPENAI_API_KEY = 'YOUR-API-KEY' #specify your OpenAI API key, that you can get on https://platform.openai.com/account/api-keys
 
 #DATABASES
-ENGINE   = ''django.db.backends.postgresql'' 
-NAME     = 'chat'
+ENGINE   = 'django.db.backends.sqlite3' 
+NAME     = 'chat.db'
 USER     = 'user'
 PASSWORD = 'password'
 
-#delete these rows if you going to use sqlite3
-HOST     = '127.0.0.1' 
-PORT     = '5432'
 
 ```
 *For detailed explanation of how to connect to specific SQL database visit [Django documentation][django-docs]* 
