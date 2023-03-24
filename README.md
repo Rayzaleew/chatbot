@@ -28,8 +28,12 @@ What's ready?
 ## Requirements
 
 * Python 3.6+
+* Django 3.1+
+* djangorestframeowrk 3.12+
+* python-dotenv
+* openai
 
-I **highly recommend** using the latest patch release of Python.
+I **highly recommend** using the latest patch release of all these packages.
 
 ## Installation
 
@@ -65,7 +69,7 @@ pip install -r requirements.txt
 
 ## Database configuration
 
---> Edit chatbot/.env file and specify data of your database. For example:
+--> Change name of the chatbot/.env.sample file to chatbot/.env and specify data of your database. For example:
 ```
 SECRET_KEY = 'some-secret-key' 
 OPENAI_API_KEY = 'YOUR-API-KEY' #specify your OpenAI API key, that you can get on https://platform.openai.com/account/api-keys
@@ -73,18 +77,10 @@ OPENAI_API_KEY = 'YOUR-API-KEY' #specify your OpenAI API key, that you can get o
 #DATABASES
 ENGINE   = 'django.db.backends.sqlite3' 
 NAME     = 'chat.db'
-USER     = 'user'
-PASSWORD = 'password'
-
 
 ```
 *For detailed explanation of how to connect to specific SQL database visit [Django documentation][django-docs]* 
 
-
---> Create superuser:
-
-    python manage.py createsuperuser
-    
 
 --> Apply migrations to your database:
 ```bash
@@ -92,6 +88,11 @@ python manage.py makemigrations
 python manage.py migrate
 
 ```
+
+--> Create superuser:
+
+    python manage.py createsuperuser
+    
 
 
 #
@@ -112,13 +113,17 @@ python manage.py runserver
 
 You can use nginx + gunicorn (Linux) or mod_wsgi + Apache (Windows) to deploy this application. 
 
+Don't forget change DEBUG option to False in settings.py and collect all static files to one place:
+
+        python manage.py collectstatic
+
 
 
 ## *To-Do:*
 
 * Create DockerFile for fast deployment
-* Add public registartion and replace login template
-* Add support for different dialogue (it's only one room for now)
+* ~Add public registration and replace login template~
+* Add support for different dialogues (it's only one room for now)
 * Optimise storing messages and context of dialogue (it's just adding previous messages to current prompt)
 * Improve user interface
 
