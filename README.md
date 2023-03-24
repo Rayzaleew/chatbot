@@ -1,5 +1,5 @@
-# [ChatBot][demo]
-[![ru](https://img.shields.io/badge/lang-ru-red.svg)](https://github.com/rayzaleew/chatbot/master/README_RU.md)
+# [ChatBot]
+
 
 **Simple chatbot implementation using OpenAI API**
 
@@ -16,8 +16,6 @@ What's ready?
 * This applications provides basic API, which means you can customize frontend as much as you want without changing logic of backend
 
 
-**Live demo**: *https://chat.w3b.dedyn.io/chat*
-
 
 **Below**: *Screenshot of the project*
 
@@ -29,7 +27,7 @@ What's ready?
 
 * Python 3.6+
 * Django 3.1+
-* djangorestframeowrk 3.12+
+* djangorestframework 3.12+
 * python-dotenv
 * openai
 
